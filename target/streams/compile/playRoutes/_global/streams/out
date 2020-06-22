@@ -1,0 +1,1 @@
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mplayRoutes[0m) @7g83535e5: Compilation error[Using different overloaded methods is not allowed. If you are using a single method in combination with default parameters, make sure you declare them all explicitly.] in C:\Users\TAKANAMI\play_trial\play-samples-scala\conf\routes:7[0m

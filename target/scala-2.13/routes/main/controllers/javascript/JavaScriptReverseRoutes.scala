@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/TAKANAMI/play_trial/play-samples-scala/conf/routes
-// @DATE:Mon Jun 22 12:06:19 JST 2020
+// @DATE:Mon Jun 22 16:25:45 JST 2020
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -22,35 +22,15 @@ package controllers.javascript {
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
       """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + """"})
-        }
-      """
-    )
-  
-    // @LINE:9
-    def tutorial: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.tutorial",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "tutorial"})
-        }
-      """
-    )
-  
-    // @LINE:8
-    def explore: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.explore",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "explore"})
+        function(name0,value1) {
+          return _wA({method:"GET", url:"""" + _prefix + """" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[Option[String]]].javascriptUnbind + """)("name", name0), (""" + implicitly[play.api.mvc.QueryStringBindable[Option[String]]].javascriptUnbind + """)("value", value1)])})
         }
       """
     )
   
   }
 
-  // @LINE:13
+  // @LINE:10
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -58,7 +38,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:13
+    // @LINE:10
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
