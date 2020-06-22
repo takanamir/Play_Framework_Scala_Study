@@ -1,0 +1,5 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\TAKANAMI\play_trial\play-samples-scala\conf\application.conf,C:\Users\TAKANAMI\play_trial\play-samples-scala\target\scala-2.13\classes\application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\TAKANAMI\play_trial\play-samples-scala\conf\logback.xml,C:\Users\TAKANAMI\play_trial\play-samples-scala\target\scala-2.13\classes\logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\TAKANAMI\play_trial\play-samples-scala\conf\messages,C:\Users\TAKANAMI\play_trial\play-samples-scala\target\scala-2.13\classes\messages)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\TAKANAMI\play_trial\play-samples-scala\conf\routes,C:\Users\TAKANAMI\play_trial\play-samples-scala\target\scala-2.13\classes\routes)[0m
