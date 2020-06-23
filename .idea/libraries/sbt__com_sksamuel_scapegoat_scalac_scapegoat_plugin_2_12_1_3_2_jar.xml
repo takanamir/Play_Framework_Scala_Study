@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="sbt: com.sksamuel.scapegoat:scalac-scapegoat-plugin_2.12:1.3.2:jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/null/Coursier/cache/v1/https/repo1.maven.org/maven2/com/sksamuel/scapegoat/scalac-scapegoat-plugin_2.12/1.3.2/scalac-scapegoat-plugin_2.12-1.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/null/Coursier/cache/v1/https/repo1.maven.org/maven2/com/sksamuel/scapegoat/scalac-scapegoat-plugin_2.12/1.3.2/scalac-scapegoat-plugin_2.12-1.3.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/null/Coursier/cache/v1/https/repo1.maven.org/maven2/com/sksamuel/scapegoat/scalac-scapegoat-plugin_2.12/1.3.2/scalac-scapegoat-plugin_2.12-1.3.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
