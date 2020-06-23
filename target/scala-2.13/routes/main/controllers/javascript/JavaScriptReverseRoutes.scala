@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/TAKANAMI/play_trial/play-samples-scala/conf/routes
-// @DATE:Mon Jun 22 22:47:12 JST 2020
+// @DATE:Tue Jun 23 10:45:42 JST 2020
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -18,6 +18,56 @@ package controllers.javascript {
     }
 
   
+    // @LINE:11
+    def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.update",
+      """
+        function(id0) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "update/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Int]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:9
+    def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.create",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "create"})
+        }
+      """
+    )
+  
+    // @LINE:12
+    def delete: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.delete",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "delete/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Int]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:8
+    def add: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.add",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "add"})
+        }
+      """
+    )
+  
+    // @LINE:10
+    def edit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.edit",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "edit/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Int]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
     // @LINE:7
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
@@ -28,19 +78,19 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:8
-    def form: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.form",
+    // @LINE:13
+    def remove: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.remove",
       """
-        function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "form"})
+        function(id0) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "remove/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Int]].javascriptUnbind + """)("id", id0))})
         }
       """
     )
   
   }
 
-  // @LINE:11
+  // @LINE:16
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -48,7 +98,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:11
+    // @LINE:16
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

@@ -15,3 +15,7 @@ lazy val root = (project in file("."))
       "-Xfatal-warnings"
     )
   )
+
+libraryDependencies += "com.h2database" % "h2" % "1.4.197"
+libraryDependencies += evolutions
+libraryDependencies += jdbc

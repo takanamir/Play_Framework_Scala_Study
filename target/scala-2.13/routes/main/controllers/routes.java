@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/TAKANAMI/play_trial/play-samples-scala/conf/routes
-// @DATE:Mon Jun 22 22:47:12 JST 2020
+// @DATE:Tue Jun 23 10:45:42 JST 2020
 
 package controllers;
 

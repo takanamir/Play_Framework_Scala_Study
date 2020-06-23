@@ -1,4 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\TAKANAMI\play_trial\play-samples-scala\app\controllers\HomeController.scala:19:23: Cannot find any HTTP Request here[0m
-[0m[[0m[31merror[0m] [0m[0m    val form = myform.bindFromRequest[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\TAKANAMI\play_trial\play-samples-scala\app\controllers\HomeController.scala:49:23: value PreparedStatement is not a member of java.sql.Connection[0m
+[0m[[0m[31merror[0m] [0m[0mdid you mean prepareStatement?[0m
+[0m[[0m[31merror[0m] [0m[0m        val ps = conn.PreparedStatement([0m
 [0m[[0m[31merror[0m] [0m[0m                      ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/TAKANAMI/play_trial/play-samples-scala/conf/routes
-// @DATE:Mon Jun 22 22:47:12 JST 2020
+// @DATE:Tue Jun 23 10:45:42 JST 2020
 
 import play.api.mvc.Call
 
@@ -17,28 +17,58 @@ package controllers {
     }
 
   
+    // @LINE:11
+    def update(id:Int): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "update/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Int]].unbind("id", id)))
+    }
+  
+    // @LINE:9
+    def create(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "create")
+    }
+  
+    // @LINE:12
+    def delete(id:Int): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "delete/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Int]].unbind("id", id)))
+    }
+  
+    // @LINE:8
+    def add(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "add")
+    }
+  
+    // @LINE:10
+    def edit(id:Int): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "edit/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Int]].unbind("id", id)))
+    }
+  
     // @LINE:7
     def index(): Call = {
       
       Call("GET", _prefix)
     }
   
-    // @LINE:8
-    def form(): Call = {
+    // @LINE:13
+    def remove(id:Int): Call = {
       
-      Call("POST", _prefix + { _defaultPrefix } + "form")
+      Call("POST", _prefix + { _defaultPrefix } + "remove/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Int]].unbind("id", id)))
     }
   
   }
 
-  // @LINE:11
+  // @LINE:16
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:11
+    // @LINE:16
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))
