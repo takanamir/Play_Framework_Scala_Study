@@ -1,6 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\TAKANAMI\play_trial\play-samples-scala\app\controllers\HomeController.scala:35:3: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : Unit[0m
-[0m[[0m[31merror[0m] [0m[0m required: play.api.mvc.Result[0m
-[0m[[0m[31merror[0m] [0m[0m  }[0m
-[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\TAKANAMI\play_trial\play-samples-scala\app\controllers\HomeController.scala:19:23: Cannot find any HTTP Request here[0m
+[0m[[0m[31merror[0m] [0m[0m    val form = myform.bindFromRequest[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

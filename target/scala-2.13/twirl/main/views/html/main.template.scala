@@ -15,52 +15,47 @@ import play.api.templates.PlayMagic._
 import play.api.mvc._
 import play.api.data._
 
-object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[String,Html,play.twirl.api.HtmlFormat.Appendable] {
+object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template4[String,String,String,Html,play.twirl.api.HtmlFormat.Appendable] {
 
-  /*
- * This template is called from the `index` template. This template
- * handles the rendering of the page header and body tags. It takes
- * two arguments, a `String` for the title of the page and an `Html`
- * object to insert into the body of the page.
- */
-  def apply/*7.2*/(title: String)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
+  /**/
+  def apply/*1.2*/(title: String, header: String, footer: String)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*7.32*/("""
+Seq[Any](format.raw/*1.64*/("""
 
-"""),format.raw/*9.1*/("""<!DOCTYPE html>
+"""),format.raw/*3.1*/("""<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>"""),_display_(/*13.13*/title),format.raw/*13.18*/("""</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="screen" href='"""),_display_(/*15.50*/routes/*15.56*/.Assets.versioned("stylesheets/main.css")),format.raw/*15.97*/("""'>
-    <link rel="stylesheet" media="screen" href='"""),_display_(/*16.50*/routes/*16.56*/.Assets.versioned("stylesheets/prism.css")),format.raw/*16.98*/("""'>
-    <link rel="shortcut icon" type="image/png" href='"""),_display_(/*17.55*/routes/*17.61*/.Assets.versioned("images/favicon.png")),format.raw/*17.100*/("""'>
-    <script src='"""),_display_(/*18.19*/routes/*18.25*/.Assets.versioned("javascripts/hello.js")),format.raw/*18.66*/("""' type="text/javascript"></script>
-    <script src='"""),_display_(/*19.19*/routes/*19.25*/.Assets.versioned("javascripts/prism.js")),format.raw/*19.66*/("""' type="text/javascript"></script>
+  <title>"""),_display_(/*6.11*/title),format.raw/*6.16*/("""</title>
+  <link rel="stylesheet" media="screen"
+        href=""""),_display_(/*8.16*/routes/*8.22*/.Assets.versioned("stylesheets/main.css")),format.raw/*8.63*/("""">
+  <link rel="shortcut icon" type="image/png"
+        href=""""),_display_(/*10.16*/routes/*10.22*/.Assets.versioned("images/favicon.png")),format.raw/*10.61*/("""">
 </head>
-
 <body>
-    <section id="top">
-        <div class="wrapper">
-            <img class="resize" src="assets/images/play_icon_reverse.svg" alt="logo" />
-            <h1>Play Hello World Web Tutorial</h1>
-        </div>
-    </section>
-    """),_display_(/*29.6*/content),format.raw/*29.13*/("""
-"""),format.raw/*30.1*/("""</body>
-
+<header class="row">
+  <div class="header">"""),_display_(/*14.24*/header),format.raw/*14.30*/("""</div>
+  <h1>"""),_display_(/*15.8*/title),format.raw/*15.13*/("""</h1>
+</header>
+<article class="row">
+  """),_display_(/*18.4*/content),format.raw/*18.11*/("""
+"""),format.raw/*19.1*/("""</article>
+<footer class="row">
+  <p>"""),_display_(/*21.7*/footer),format.raw/*21.13*/("""</p>
+</footer>
+<script src=""""),_display_(/*23.15*/routes/*23.21*/.Assets.versioned("javascripts/main.js")),format.raw/*23.61*/(""""
+type="text/javascript"></script>
+    </body>
 </html>"""))
       }
     }
   }
 
-  def render(title:String,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(title)(content)
+  def render(title:String,header:String,footer:String,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(title,header,footer)(content)
 
-  def f:((String) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (title) => (content) => apply(title)(content)
+  def f:((String,String,String) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (title,header,footer) => (content) => apply(title,header,footer)(content)
 
   def ref: this.type = this
 
@@ -69,11 +64,11 @@ Seq[Any](format.raw/*7.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2020-06-22T12:06:21.153470800
+                  DATE: 2020-06-22T20:48:17.970810500
                   SOURCE: C:/Users/TAKANAMI/play_trial/play-samples-scala/app/views/main.scala.html
-                  HASH: be49df457fee414c7efc8e689a2e3033a3af8ec7
-                  MATRIX: 992->266|1117->296|1147->300|1231->357|1257->362|1419->497|1434->503|1496->544|1576->597|1591->603|1654->645|1739->703|1754->709|1815->748|1864->770|1879->776|1941->817|2022->871|2037->877|2099->918|2413->1206|2441->1213|2470->1215
-                  LINES: 26->7|31->7|33->9|37->13|37->13|39->15|39->15|39->15|40->16|40->16|40->16|41->17|41->17|41->17|42->18|42->18|42->18|43->19|43->19|43->19|53->29|53->29|54->30
+                  HASH: 7bfad3b3e5c0ed14a9fdf061201c086b27ba6baf
+                  MATRIX: 747->1|904->63|934->67|1013->120|1038->125|1130->191|1144->197|1205->238|1297->303|1312->309|1372->348|1465->414|1492->420|1533->435|1559->440|1629->484|1657->491|1686->493|1752->533|1779->539|1837->570|1852->576|1913->616
+                  LINES: 21->1|26->1|28->3|31->6|31->6|33->8|33->8|33->8|35->10|35->10|35->10|39->14|39->14|40->15|40->15|43->18|43->18|44->19|46->21|46->21|48->23|48->23|48->23
                   -- GENERATED --
               */
           
